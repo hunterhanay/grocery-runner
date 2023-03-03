@@ -1,0 +1,14 @@
+<%= link_to "Back to Recipes", recipes_path %>
+<h1><%= @recipe.name %></h1>
+<p><%= @recipe.description %></p>
+<ul>
+  <li><%= link_to "Edit", edit_recipe_path(@recipe) %></li>
+  <li><%= link_to "Destroy", recipe_path(@recipe), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>
+<h2>Items</h2>
+<%= render @recipe.items %>
+<h2>Add an Item:</h2>
+<%= render 'items/form' %>

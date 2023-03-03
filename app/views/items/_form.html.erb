@@ -1,0 +1,29 @@
+<%= form_with model: [ @recipe, @recipe.items.build ] do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </div>
+  <div>
+    <%= form.label :amountType %><br>
+    <%= form.text_area :amountType %>
+  </div>
+  <div>
+    <%= form.label :amount %><br>
+    <%= form.text_area :amount %>
+  </div>
+  <div>
+    <%= form.label :price %><br>
+    <%= form.text_area :price %>
+  </div>
+  <div>
+    <%= form.label :groceryType %><br>
+    <%= form.text_area :groceryType %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
