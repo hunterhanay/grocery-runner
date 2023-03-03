@@ -8,20 +8,22 @@
     <%= form.text_area :description %>
   </div>
   <div>
-    <%= form.label :amountType %><br>
-    <%= form.text_area :amountType %>
+    <%= form.label :amount_type %><br>
+    <%= form.select :amount_type, options_for_select([['Cup', 'cup'], ['Fluid Ounce', 'fl oz'], ['Gallon', 'gal'], ['Liter', 'L'],
+ ['Milliliter', 'mL'], ['Ounce', 'oz'], ['Pint', 'pt'], ['Quart', 'qt'], ['Tablespoon', 'tbsp'], ['Teaspoon', 'tsp'], ['Other', 'other']]) %>
   </div>
   <div>
     <%= form.label :amount %><br>
-    <%= form.text_area :amount %>
+    <%= form.text_field :amount %>
   </div>
   <div>
     <%= form.label :price %><br>
-    <%= form.text_area :price %>
+    <%= form.text_field:price %>
   </div>
   <div>
-    <%= form.label :groceryType %><br>
-    <%= form.text_area :groceryType %>
+    <%= form.label :grocery_type %><br>
+    <%= form.select :grocery_type, options_for_select([['Bakery', 'bakery'], ['Canned Goods', 'canned'], ['Dairy', 'dairy'], ['Frozen Foods', 'frozen'],
+ ['Meat', 'meat'], ['Produce', 'produce'], ['Snacks', 'snacks'], ['Spices', 'spices'], ['Pantry', 'pantry'], ['Other', 'other']])%>
   </div>
   <div>
     <%= form.submit %>

@@ -9,5 +9,9 @@ Rails.application.routes.draw do
   # get "/recipes/:id", to: "recipes#show"
   resources :recipes do
     resources :items
+    post 'add_items', on: :member
   end
 end
+# This code adds a new member route to the recipes resource that responds to a POST request and maps to the add_items 
+# action in the RecipesController. The on: :member option tells Rails to generate a URL that includes the ID of the 
+# recipe being added. With this modification, you can use the button or link in your view to trigger the add_items action.

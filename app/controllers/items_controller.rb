@@ -14,6 +14,6 @@ end
 
 private
     def item_params
-        params.require(:item).permit(:name, :description, :amountType, :amount, :price, :groceryType)
+        params.require(:item).permit(:name, :description, :amount_type, :amount, :price, :grocery_type)
     end
 end

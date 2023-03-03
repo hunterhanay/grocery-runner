@@ -1,30 +1,12 @@
-<p>
-  <strong>Item:</strong>
-  <%= item.name %>
-</p>
-<p>
-  <strong>Description:</strong>
-  <%= item.description %>
-</p>
-<p>
-  <strong>Amount Type:</strong>
-  <%= item.amountType %>
-</p>
-<p>
-  <strong>Amount:</strong>
-  <%= item.amount %>
-</p>
-<p>
-  <strong>Price:</strong>
-  <%= item.price %>
-</p>
-<p>
-  <strong>Grocery Type:</strong>
-  <%= item.groceryType %>
-</p>
-<p>
-  <%= link_to "Destroy Item", [item.recipe, item], data: {
+<tr>
+  <td><%= item.name %></td>
+  <td><%= item.description %></td>
+  <td><%= item.amount_type %></td>
+  <td><%= item.amount %></td>
+  <td><%= item.price %></td>
+  <td><%= item.grocery_type %></td>
+  <td><%= link_to "Destroy Item", [item.recipe, item], data: {
                   turbo_method: :delete,
                   turbo_confirm: "Are you sure?"
-                } %>
-</p>
+                } %></td>
+</tr>

@@ -9,6 +9,21 @@
                   } %></li>
 </ul>
 <h2>Items</h2>
-<%= render @recipe.items %>
+<table>
+  <thead>
+    <tr>
+      <th>Item Name</th>
+      <th>Description</th>
+      <th>Amount Type</th>
+      <th>Amount</th>
+      <th>Price</th>
+      <th>Grocery Type</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @recipe.items %>
+  </tbody>
+</table>
 <h2>Add an Item:</h2>
 <%= render 'items/form' %>
