@@ -5,12 +5,16 @@ Rails.application.routes.draw do
   # root "articles#index"
   root "recipes#index"
 
-  # get "/recipes", to: "recipes#index"
-  # get "/recipes/:id", to: "recipes#show"
   resources :recipes do
     resources :items
     post 'add_items', on: :member
   end
+  resources :grocery_list_items do 
+    collection do
+      delete :destroy_all
+    end
+  end
+
 end
 # This code adds a new member route to the recipes resource that responds to a POST request and maps to the add_items 
 # action in the RecipesController. The on: :member option tells Rails to generate a URL that includes the ID of the 

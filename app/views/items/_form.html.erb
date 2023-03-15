@@ -9,8 +9,8 @@
   </div>
   <div>
     <%= form.label :amount_type %><br>
-    <%= form.select :amount_type, options_for_select([['Cup', 'cup'], ['Fluid Ounce', 'fl oz'], ['Gallon', 'gal'], ['Liter', 'L'],
- ['Milliliter', 'mL'], ['Ounce', 'oz'], ['Pint', 'pt'], ['Quart', 'qt'], ['Tablespoon', 'tbsp'], ['Teaspoon', 'tsp'], ['Other', 'other']]) %>
+    <%= form.select :amount_type, options_for_select([['Cups', 'cups'], ['Fluid Ounce', 'fl oz'], ['Gallons', 'gal'], ['Grams', 'g'], ['Liters', 'L'],
+ ['Milliliter', 'mL'], ['Ounce', 'oz'], ['Pint', 'pt'], ['Pounds', 'lbs'], ['Quantity', 'quantity'], ['Quart', 'qt'], ['Tablespoon', 'tbsp'], ['Teaspoon', 'tsp'], ['Other', 'other']]) %>
   </div>
   <div>
     <%= form.label :amount %><br>
@@ -23,7 +23,7 @@
   <div>
     <%= form.label :grocery_type %><br>
     <%= form.select :grocery_type, options_for_select([['Bakery', 'bakery'], ['Canned Goods', 'canned'], ['Dairy', 'dairy'], ['Frozen Foods', 'frozen'],
- ['Meat', 'meat'], ['Produce', 'produce'], ['Snacks', 'snacks'], ['Spices', 'spices'], ['Pantry', 'pantry'], ['Other', 'other']])%>
+ ['Meat', 'meat'], ['Produce', 'produce'], ['Snacks', 'snacks'], ['Spices', 'spices'], ['Pantry', 'pantry'],  ['Other', 'other']])%>
   </div>
   <div>
     <%= form.submit %>

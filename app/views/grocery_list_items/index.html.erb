@@ -1,0 +1,31 @@
+<%= link_to "Back to Recipes", recipes_path %>
+<h1>Grocery List</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Item Name</th>
+      <th>Description</th>
+      <th>Amount Type</th>
+      <th>Amount</th>
+      <th>Price</th>
+      <th>Grocery Type</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="grocery-list">
+    <% @grocery_list_items.each do |grocery_list_item| %>
+      <%= render grocery_list_item %>
+    <% end %>
+  </tbody>
+</table>
+<%= button_to 'Delete All Items', destroy_all_grocery_list_items_path, method: :delete, data: { confirm: 'Are you sure you want to delete all items?' }, class: 'button' %>
+<%# In this code, a button is added to each recipe item in the list using button_to. The button is set to trigger an AJAX request to the 
+add_items_path with a POST method, which is the route that will be used to create the new items for the recipe in the grocery list. 
+The remote: true option tells Rails to send the request via AJAX.
+
+When the button is clicked, the AJAX request will be sent to the server, which will create the new items for the recipe in the grocery 
+list. The server will then respond with a JavaScript file that updates the grocery list table with the new items using JavaScript DOM 
+manipulation. The updated items will be rendered inside the tbody tag with an id of grocery-list, which is targeted by the JavaScript code.
+
+You would also need to define the add_items action in the recipes controller to handle the AJAX request and create the new items for 
+the recipe in the grocery list. The code for this action would depend on how you have set up your models and associations.  %>

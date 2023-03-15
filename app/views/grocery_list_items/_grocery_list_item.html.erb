@@ -1,0 +1,15 @@
+<tr>
+  <td><%= link_to grocery_list_item.name, grocery_list_item %></td>
+  <td><%= grocery_list_item.description %></td>
+  <td><%= grocery_list_item.amount_type %></td>
+  <td><%= grocery_list_item.amount %></td>
+  <td><%= grocery_list_item.price %></td>
+  <td><%= grocery_list_item.grocery_type %></td>
+  <td><%= link_to "Destroy", grocery_list_item_path(grocery_list_item), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
+  </tr>
+  <%# Here, grocery_list_item_path(grocery_list_item) generates a path to the destroy 
+action of the GroceryListItemsController for the specified GroceryListItem record, 
+and method: :delete specifies that a DELETE request should be sent to the server. %>
